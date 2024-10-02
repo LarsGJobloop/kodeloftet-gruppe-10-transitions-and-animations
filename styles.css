@@ -3,10 +3,11 @@
   color: white;
   padding: 1rem 2rem;
 
-  transition-duration: 200ms;
-  /* transition-delay: 1000ms; */
-  transition-property: scale;
-  transition-timing-function: ease-in-out;
+  /* Transition rules */
+  transition-duration: 200ms; /* how long the transition should take */
+  /* transition-delay: 1000ms; */ /* Wait this long before activating */
+  transition-property: scale; /* which CSS rule should this apply to? */
+  transition-timing-function: ease-in-out; /* The acceleration of the transition */
 }
 .transition:hover {
   background-color: greenyellow;
