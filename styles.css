@@ -26,3 +26,59 @@
 .hover-scale:hover {
   scale: 1.02;
 }
+/* Animimation Styling */
+.animation-container {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  animation-name: bouncing;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0px);
+  }
+
+  95% {
+    transform: translateY(80px);
+    height: 20px;
+  }
+
+  100% {
+    transform: translateY(85px);
+    height: 15px;
+    transform: matrix3d();
+  }
+}
+
+.slidin-left {
+  animation-name: slidin;
+  animation-duration: 2000ms;
+  --from-offset: -100vw;
+}
+
+.slidin-right {
+  animation-name: slidin;
+  animation-duration: 2000ms;
+  --from-offset: 100vw;
+}
+
+@keyframes slidin {
+  0% {
+    transform: translateX(var(--from-offset));
+  }
+}
